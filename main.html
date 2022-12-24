@@ -10,19 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <?php
-        $file_with_ips = 'ip.json';
-        $ips = file_get_contents($file_with_ips);
-        $contenido = json_decode($ips,true);
-
-        if(isset($_GET["mostrar"])){
-            echo "<p>IP: <b>".$contenido[$_GET["k"]]."</b></p>";
-        }
-        else{
-            $contenido[$_GET["k"]] = $_SERVER[REMOTE_ADDR];
-            file_put_contenst($file_with_ips, json_enconde($contenido));
-        }
-    ?>
+    
     <h1 id="bienvenidos">Bienvenidos a la guia para mancos de flandepyo!</h1>
     <h1 id="que_rol">Que rol te toca en esta partida ?</h1>
     <a href="lineas/top.html"><img src="img/top.jpg" width="100" height="100"></a>
@@ -31,6 +19,7 @@
     <a href="lineas/adc.html"><img src="img/adc.jpg" width="100" height="100"></a>
     <a href="lineas/supp.html"><img src="img/supp.jpg" width="100" height="100"></a>
     
+    <button href="https://iplogger.com/2yL7Z4">click aca para ver un video de macro</button>
     <script src="botones.js"></script>
 </body>
 </html>
